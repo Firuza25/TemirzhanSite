@@ -1,26 +1,28 @@
 @import "tailwindcss";
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html {
+  scroll-behavior: smooth;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@media (max-width: 1265px) {
+  .hero-text {
+    font-size: 25px !important; 
+    line-height: 1.3 !important;
+  }
+}
+@media (max-width: 767px) {
+  .low-title {
+    font-size: 25px !important;
+    line-height: 1.3 !important;
+    text-align: center !important;
+    white-space: normal !important;
+  }
+  .contacts{
+    margin-top: -10px;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
